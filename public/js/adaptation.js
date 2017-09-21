@@ -61,27 +61,28 @@ function requestFullScreen(element) {
     }
 }
 
-function renderDiv() {   
-        lib.removeElement(document.querySelector('.butList'));
-lib.removeElement(document.querySelector('.tip'));
-var resultDiv=document.createElement("DIV");
-resultDiv.className='result';
+function renderDiv() {
+    lib.removeElement(document.querySelector('.butList'));
+    lib.removeElement(document.querySelector('.tip'));
+    var resultDiv = document.createElement("DIV");
+    resultDiv.className = 'result';
 
-var controlCanvas=document.createElement("canvas");
-controlCanvas.setAttribute("id", "controlCanvas");
-controlCanvas.setAttribute("width", "666");
-controlCanvas.setAttribute("height", "364");
+    var controlCanvas = document.createElement("canvas");
+    controlCanvas.setAttribute("id", "controlCanvas");
+    controlCanvas.setAttribute("width", "666");
+    controlCanvas.setAttribute("height", "364");
     document.querySelector('.main').appendChild(resultDiv);
-     document.querySelector('.main').appendChild(controlCanvas);
-controler.init();
+    document.querySelector('.main').appendChild(controlCanvas);
+    controler.init();
 }
 
 function init() {
-  
+
     renderDiv();
     setRotate();
     addMobile = false;
 }
+
 function renderHeader() {
     let isMobile = judgeMobile();
     if (!isMobile) {
@@ -90,7 +91,7 @@ function renderHeader() {
         document.getElementsByTagName("head")[0].appendChild(title);
         document.getElementsByTagName("body")[0].style.opacity = 1;
     } else {
-        var gamecss= document.getElementsByTagName('head')[0].innerHTML;
+        var gamecss = document.getElementsByTagName('head')[0].innerHTML;
         var str = `<meta charset="UTF-8">
     <meta content="telephone=no,email=no" name="format-detection">
     <meta name="applicable-device" content="mobile">
@@ -99,8 +100,7 @@ function renderHeader() {
     <meta name="full-screen" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
        <title>超级马里奥</title>
-        <link rel="icon" href="./images/ico/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="./images/ico/favicon.ico" type="image/x-icon">`+gamecss;   
+       ` + gamecss;
         document.getElementsByTagName('head')[0].innerHTML = str;
     }
 }

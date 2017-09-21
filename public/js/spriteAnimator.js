@@ -2,6 +2,9 @@ import {
     SpriteAnimator
 } from './libs/spriteAnimator';
 import {
+    lib
+} from './public.js';
+import {
     publicConfig,
     monsterConfig,
     tortoiseConfig,
