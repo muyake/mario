@@ -1,9 +1,9 @@
-
-body{
+body {
     opacity: 0;
 }
+
 @media only screen and (min-width: 1029px) {
-.load {
+    .load {
         width: 200px;
         height: 20px;
         position: absolute;
@@ -11,7 +11,7 @@ body{
         top: 100%;
         transform: translate3d(-50%, -50%, 0);
     }
-  
+
     #mycanvas,
     .loadDiv {
         background: #fff;
@@ -25,9 +25,7 @@ body{
     .loadDiv {
         width: 666px;
         height: 364px;
-            position: absolute;
-    left: 0;
-    top: 0;
+        position: absolute;        
         background: url('../images/welcome.png') no-repeat center/100% 100%;
         display: block;
     }
@@ -35,7 +33,4 @@ body{
     .tip {
         display: none;
     }
-
 }
-
-    
