@@ -54,6 +54,14 @@
         background: url(./static/img/a56ecd7c521923d36c804d34ed7c207e.png) no-repeat center/100% 100%;
         display: block;
     }
+    .load {
+        width: 200px;
+        height: 20px;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate3d(-50%, -50%, 0);
+    }
 }
 body{
     opacity: 0;
