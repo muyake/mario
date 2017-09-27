@@ -27,7 +27,7 @@ padding: 0px;
         width: 666px;
         height: 364px;
         position: absolute;        
-        background: url('../images/welcome.png') no-repeat center/100% 100%;
+        background: url(./static/img/a56ecd7c521923d36c804d34ed7c207e.png) no-repeat center/100% 100%;
         display: block;
     }
 

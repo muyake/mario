@@ -5,6 +5,9 @@ const extractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: {
+        // 主要为了输出样式
+        mobilecss:"./public/js/mobilecss.js",
+        pccss:"./public/js/pccss.js",
         game: './public/js/game.js',
         //pc: './public/css/pc.css',
     },
@@ -46,18 +49,20 @@ module.exports = {
             title: "",
             favicon: './public/images/ico/favicon.ico',
             filename: 'index.html',
+             chunks: ['game'],
             template: './public/template/index.ejs',
-        }),
-        new CleanWebpackPlugin(
-            ['dist/'], 　 //匹配删除的文件
-            {
-                root: __dirname,
-                　　　　　　　　　　 //根目录
-                verbose: true,
-                　　　　　　　　　　 //开启在控制台输出信息
-                dry: false　　　　　　　　　　 //启用删除文件
-            }
-        )
+        })
+        //,
+        // new CleanWebpackPlugin(
+        //     ['dist/'], 　 //匹配删除的文件
+        //     {
+        //         root: __dirname,
+        //         　　　　　　　　　　 //根目录
+        //         verbose: true,
+        //         　　　　　　　　　　 //开启在控制台输出信息
+        //         dry: false　　　　　　　　　　 //启用删除文件
+        //     }
+        // )
 
     ]
 }
