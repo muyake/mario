@@ -1,12 +1,13 @@
 {
-  "name": "mario-es6",
+  "name": "mario",
   "version": "1.0.1",
   "description": "超级玛丽第二版",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --watch --config ./webpack.config.dev.js",
-    "publish": "webpack --config ./webpack.config.publish.js"
+    "dev": "webpack --watch --config ./webpack.config.js",
+    "publish": "webpack --config ./webpack.config.publish.js",
+  "start": "webpack-dev-server --inline --hot"
   },
   "keywords": [
     "超级玛丽"

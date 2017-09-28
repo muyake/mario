@@ -12,8 +12,9 @@ module.exports = {
         //pc: './public/css/pc.css',
     },
     output: {
-        path: __dirname + "/dist/",
-        filename: "js/[name].js"
+        path: __dirname + "/dist/[hash]",
+        filename: "js/[name].js",
+        publicPath:'/'
     },
     module: {
         loaders: [{
@@ -64,5 +65,6 @@ module.exports = {
         //     }
         // )
 
-    ]
+    ],
+   
 }

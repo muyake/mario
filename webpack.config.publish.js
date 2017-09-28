@@ -10,7 +10,8 @@ module.exports = {
     },
     output: {
         path: __dirname + "/dist/",
-        filename: "js/[name]-[hash].js"
+        filename: "js/[name].js",
+        publicPath:'https://muyake.github.io/mario/dist/[hash]/'
     },
     module: {
         loaders: [{
