@@ -85,13 +85,12 @@ function renderHeader() {
     let isMobile = judgeMobile();
     if (!isMobile) {
         var title = document.createElement('title');
-        title.innerHTML = '超级马里奥'
-      
-        var link=document.createElement('link');
-        link.setAttribute('href','pccss.css');
-        link.setAttribute('rel','stylesheet');
+        title.innerHTML = '超级马里奥';      
+        // var link=document.createElement('link');
+        // link.setAttribute('href','pccss.css');
+        // link.setAttribute('rel','stylesheet');
         document.getElementsByTagName("head")[0].appendChild(title);
-        document.getElementsByTagName("head")[0].appendChild(link);
+      //  document.getElementsByTagName("head")[0].appendChild(link);
         document.getElementsByTagName("body")[0].style.opacity = 1;
 
     } else {
@@ -106,11 +105,9 @@ function renderHeader() {
        <title>超级马里奥</title>
        ` + gamecss;
         document.getElementsByTagName('head')[0].innerHTML = str;
-           var link=document.createElement('link');
-        link.setAttribute('href','mobilecss.css');
-        link.setAttribute('rel','stylesheet');
-  
-            document.getElementsByTagName("head")[0].appendChild(link);
+        document.querySelector('html').className='full';
+        document.querySelector('body').className='full';
+        document.querySelector('.main').className='mobile main';
     }
 }
 renderHeader();

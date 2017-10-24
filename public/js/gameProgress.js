@@ -58,11 +58,10 @@ let progressObj = {
     countDownWatch: new Stopwatch(),
     createSpriteMileNum: 0,
     mileageNumUpdate: function(fpsNum) {
-        this.fpsNum = (fpsNum == 0) ? 1 : (fpsNum || this.fpsNum);
-        // console.log(this.velocityX );
+        this.fpsNum = (fpsNum == 0) ? 1 : (fpsNum || this.fpsNum);      
         this.mileageNum += this.velocityX / this.fpsNum;
-
-        this.createSpriteMileNum = this.mileageNum * gameConfig.objectSpeedRate;
+        this.createSpriteMileNum =(this.mileageNum * gameConfig.objectSpeedRate).toFixed(0);
+       
     },
     countDownNumUpdate: function() {
         this.currentTime = this.totaltime - this.countDownWatch.getElapsedTime() / 1000;
@@ -491,8 +490,6 @@ let totalProgressSprite = {
     }],
     fire: [],
     badflower: [
-
-
         {
             isVisible: true,
             id: lib.newGuid(),
@@ -509,6 +506,13 @@ let totalProgressSprite = {
 
     ],
     monster: [{
+            isDie: false,
+            isAdd: false, //判断是否加入过数组
+            isMonster: true,
+            isVisible: true,
+            id: lib.newGuid(),
+            positionmile:  540,
+        },{
             isDie: false,
             isAdd: false, //判断是否加入过数组
             isMonster: true,
@@ -590,9 +594,6 @@ let totalProgressSprite = {
             id: lib.newGuid(),
             positionmile: PJNum.wall4 + WH.wall.width * 8 + WH.monster.width + 20,
         }
-
-
-
     ],
     //mushroom: [],
     tortoise: [ {
@@ -631,12 +632,7 @@ let totalProgressSprite = {
         positionmile: PJNum.final1 + 234,
     }],
     hole: [
-        // {
-        //     isVisible: true,
-        //     id: lib.newGuid(),
-        //     physicaltop: -33,
-        //     positionmile: 450,
-        // },
+      
         {
             isVisible: true,
             id: lib.newGuid(),

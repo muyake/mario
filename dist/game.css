@@ -1,100 +1,100 @@
-body,html,canvas,div {
-margin:0px;
-padding: 0px;
+body,
+html,
+canvas,
+div {
+    margin: 0px;
+    padding: 0px;
 }
 
-    html {
-        width: 100%;
-        height: 100%;
-    }
+.pc .load {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate3d(-50%, -50%, 0);
+}
 
-    body {
-        width: 100%;
-        height: 100%;
-        /*background: darkgreen;*/
-    }
+.pc #mycanvas,
+.pc .loadDiv {
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    display: none;
+}
 
-    #controlCanvas {
-        /*background: url(background2.png) no-repeat center/100% 100%;*/
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0%;
-        top: 0%;
-    }
+.pc .loadDiv {
+    width: 666px;
+    height: 364px;
+    position: absolute;
+    background: url(./static/img/welcome.a56ecd7c521923d36c804d34ed7c207e.png) no-repeat center/100% 100%;
+    display: block;
+}
 
-    .floatingControls {
-        position: absolute;
-    }
+.pc .load canvas {
+    width: 100%;
+    height: 100%;
+}
 
-    .divfontsize {
-        position: absolute;
-        left: 642px;
-        top: 282px;
-        color: red;
-        font-size: 0.28rem;
-    }
+.pc .tip {
+    display: none;
+}
 
-    .main {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transform-origin: center;
-    }
-    #mycanvas{
-           width: 100%;
-    height: 100%; 
-    }
-     .loadDiv {
-         position: absolute;
+
+#controlCanvas {
+    /*background: url(background2.png) no-repeat center/100% 100%;*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+.mobile .floatingControls {
+    position: absolute;
+}
+
+.mobile .divfontsize {
+    position: absolute;
+    left: 642px;
+    top: 282px;
+    color: red;
+    font-size: 0.28rem;
+}
+
+.mobile .main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: center;
+}
+
+.mobile #mycanvas {
+    width: 100%;
+    height: 100%;
+}
+
+.mobile .loadDiv {
+    position: absolute;
     left: 0;
     top: 0;
-        width: 100%;
-        height: 100%;
-        background: url(./static/img/a56ecd7c521923d36c804d34ed7c207e.png) no-repeat center/100% 100%;
-        display: block;
-    }
-    .load {
-        width: 200px;
-        height: 20px;
-        position: absolute;
-        left: 50%;
-        top: 25%;
-        transform: translate3d(-50%, -50%, 0);
-    }
-body,html,canvas,div {
-    margin:0px;
-padding: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(./static/img/welcome.a56ecd7c521923d36c804d34ed7c207e.png) no-repeat center/100% 100%;
+    display: block;
 }
-
-
-    .load {
-        width: 200px;
-        height: 20px;
-        position: absolute;
-        left: 50%;
-        top: 100%;
-        transform: translate3d(-50%, -50%, 0);
-    }
-
-    #mycanvas,
-    .loadDiv {
-        background: #fff;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate3d(-50%, -50%, 0);
-        display: none;
-    }
-
-    .loadDiv {
-        width: 666px;
-        height: 364px;
-        position: absolute;        
-        background: url(./static/img/a56ecd7c521923d36c804d34ed7c207e.png) no-repeat center/100% 100%;
-        display: block;
-    }
-
-    .tip {
-        display: none;
-    }
+.mobile .load {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate3d(-50%, -50%, 0);
+    font-size: 0;
+}
+.mobile  .load canvas,.mobile .load div{
+    width: 100%;
+    height: 100%;
+}

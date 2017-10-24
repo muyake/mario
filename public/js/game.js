@@ -1,4 +1,4 @@
-
+require('../css/pc.css');
 
 import {
     Game

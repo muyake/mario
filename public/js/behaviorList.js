@@ -31,9 +31,9 @@ let behaviorList = {
         this.fpsNum = 60;
         this.execute = function(sprite, context, time, fpsNum) {
             let translateLeft = sprite.translateLeft || 0;
+           // console.log(translateLeft);
             //  console.log('translateLeft'+progressObj.createSpriteMileNum);
-
-            sprite.left = sprite.positionmile - progressObj.createSpriteMileNum - translateLeft;
+          sprite.left = sprite.positionmile - progressObj.createSpriteMileNum - translateLeft;
         }
     },
 

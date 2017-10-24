@@ -69,7 +69,6 @@ export let CD = {
             let flog = mover.upColliding && ((mover.left + mover.width) < upColliding.left || (upColliding.left + upColliding.width) < mover.left);
             if (!mover.upColliding || flog) {
                 if (mover.isDie == false) {
-
                     mover.initialTop = element.mycanvasHeight - mover.height - gameConfig.roadHeight;
                     // console.log('玛丽熬'+mover.initialTop);
                 }
@@ -129,11 +128,8 @@ export let CD = {
         },
         //马里奥在墙上侧
         MupBarrier: function(mario, barrier) {
-
             mario.initialTop = barrier.top - mario.height;
             mario.upColliding = barrier;
-
-
         },
         MdownWall: function(mario, wall, callback) {
             mario.velocityY = -mario.velocityY;

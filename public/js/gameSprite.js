@@ -152,6 +152,7 @@ class SceneImagePainter extends ImagePainter {
     paint(sprite, context) {
         if (!!this.image) {
             if (sprite.imgwidth) {
+               
                 context.drawImage(this.image, sprite.imgleft, sprite.imgtop, sprite.imgwidth, sprite.imgheight, sprite.left, sprite.top,
                     sprite.width, sprite.height);
             } else {

@@ -5,16 +5,13 @@ const extractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: {
-        // 主要为了输出样式
-        mobilecss:"./public/js/mobilecss.js",
-        pccss:"./public/js/pccss.js",
-        game: './public/js/game.js',
-        //pc: './public/css/pc.css',
+        // 主要为了输出样式      
+        game: './public/js/game.js',       
     },
     output: {
-        path: __dirname + "/dist/[hash]",
+        path: __dirname + "/dist/",
         filename: "js/[name].js",
-        publicPath:'/'
+       // publicPath:'/'
     },
     module: {
         loaders: [{
@@ -24,10 +21,9 @@ module.exports = {
                     use: "css-loader"
                 })
             },
-
             {
                 test: /\.(png|jpg|ico)$/,
-                loader: "url-loader?limit=8192&name=./static/img/[hash].[ext]"
+                loader: "url-loader?limit=819&name=./static/img/[name].[hash].[ext]"
             }, {
                 test: path.join(__dirname, 'public/js'),
                 loader: 'babel-loader',
@@ -39,7 +35,7 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: 'static/mp3/[hash].[ext]'
+                    name: 'static/mp3/[name].[ext]'
                 }
             }
         ]
@@ -50,7 +46,7 @@ module.exports = {
             title: "",
             favicon: './public/images/ico/favicon.ico',
             filename: 'index.html',
-             chunks: ['game'],
+             chunks: ['game','pccss'],
             template: './public/template/index.ejs',
         })
         //,

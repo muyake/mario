@@ -1,36 +1,100 @@
-body,html,canvas,div {
-    margin:0px;
-padding: 0px;
+body,
+html,
+canvas,
+div {
+    margin: 0px;
+    padding: 0px;
+}
+
+.pc .load {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.pc #mycanvas,
+.pc .loadDiv {
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    display: none;
+}
+
+.pc .loadDiv {
+    width: 666px;
+    height: 364px;
+    position: absolute;
+    background: url('../images/welcome.png') no-repeat center/100% 100%;
+    display: block;
+}
+
+.pc .load canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.pc .tip {
+    display: none;
 }
 
 
-    .load {
-        width: 200px;
-        height: 20px;
-        position: absolute;
-        left: 50%;
-        top: 100%;
-        transform: translate3d(-50%, -50%, 0);
-    }
+#controlCanvas {
+    /*background: url(background2.png) no-repeat center/100% 100%;*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
 
-    #mycanvas,
-    .loadDiv {
-        background: #fff;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate3d(-50%, -50%, 0);
-        display: none;
-    }
+.mobile .floatingControls {
+    position: absolute;
+}
 
-    .loadDiv {
-        width: 666px;
-        height: 364px;
-        position: absolute;        
-        background: url('../images/welcome.png') no-repeat center/100% 100%;
-        display: block;
-    }
+.mobile .divfontsize {
+    position: absolute;
+    left: 642px;
+    top: 282px;
+    color: red;
+    font-size: 0.28rem;
+}
 
-    .tip {
-        display: none;
-    }
+.mobile .main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: center;
+}
+
+.mobile #mycanvas {
+    width: 100%;
+    height: 100%;
+}
+
+.mobile .loadDiv {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/welcome.png') no-repeat center/100% 100%;
+    display: block;
+}
+.mobile .load {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate3d(-50%, -50%, 0);
+    font-size: 0;
+}
+.mobile  .load canvas,.mobile .load div{
+    width: 100%;
+    height: 100%;
+}

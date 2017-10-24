@@ -10,8 +10,8 @@ module.exports = {
     },
     output: {
         path: __dirname + "/dist/",
-        filename: "js/[name].js",
-        publicPath:'https://muyake.github.io/mario/dist/[hash]/'
+        filename: "js/[name].[hash].js",
+        publicPath:'https://muyake.github.io/mario/dist/'
     },
     module: {
         loaders: [{
@@ -24,7 +24,7 @@ module.exports = {
 
             {
                 test: /\.(png|jpg|ico)$/,
-                loader: "url-loader?limit=8192&name=./static/img/[hash].[ext]"
+                loader: "url-loader?limit=81&name=./static/img/[hash].[ext]"
             }, {
                 test: path.join(__dirname, 'public/js'),
                 loader: 'babel-loader',
