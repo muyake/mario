@@ -1366,10 +1366,10 @@ var totalProgressSprite = {
     }, {
         isVisible: true,
         id: _public.lib.newGuid(),
-        status: 1,
+        status: 0,
         positionmile: PJNum.wall1 + 100 + _config.WH.wall.width * 2,
         physicaltop: PJNum.wallTop,
-        contain: 3 //0代表没有东西,1代表金币，2代表蘑菇，3代表花，4代表星星。
+        contain: 0 //0代表没有东西,1代表金币，2代表蘑菇，3代表花，4代表星星。
     }, {
         isVisible: true,
         id: _public.lib.newGuid(),
@@ -1840,12 +1840,15 @@ var totalProgressSprite = {
         isVisible: true,
         id: _public.lib.newGuid(),
         positionmile: PJNum.wall3 + _config.WH.wall.width * 50
-    }, {
-        isAdd: false, //判断是否加入过数组
-        isMonster: true,
-        isVisible: true,
-        id: _public.lib.newGuid(),
-        positionmile: 740
+        // ,
+        // {
+        //     isAdd: false, //判断是否加入过数组
+        //     isMonster: true,
+        //     isVisible: true,
+        //     id: lib.newGuid(),
+        //     positionmile: 740,
+        // }
+
     }],
     star: [],
     tower: [{
@@ -4329,22 +4332,23 @@ var sourceLoadObj = {
         }
     },
     progressOver: function progressOver() {
+
         _config.element.mycanvas.style.display = 'block';
         _config.element.progressDiv.style.display = 'none';
         _config.element.tipDiv.style.display = 'block';
         _config.element.progressBox.style.display = 'none';
+
+        //背景音乐响起     
+        _audioControl.audioControl.BGMPlay(gameSourceObj.audioList.BGM);
+        _audioControl.audioControl.timeupdateAddEventListener(gameSourceObj.audioList.jumpAll);
+        _audioControl.audioControl.timeupdateAddEventListener(gameSourceObj.audioList.collision);
+        _audioControl.audioControl.timeupdateAddEventListener(gameSourceObj.audioList.music);
         //加载图片完成后执行。
         _gameProgress.createFactory.init();
         _gameProgress.createFactory.insertDrawSpriteList(0, drawSpriteList.arrayOthersA);
         gameControl.start();
         _gameProgress.progressObj.countDownStart();
-        //背景音乐响起     
-        //audioControl.BGMPlay(gameSourceObj.audioList.BGM);
-        _audioControl.audioControl.timeupdateAddEventListener(gameSourceObj.audioList.jumpAll);
-        _audioControl.audioControl.timeupdateAddEventListener(gameSourceObj.audioList.collision);
-        _audioControl.audioControl.timeupdateAddEventListener(gameSourceObj.audioList.music);
         game.init();
-
         // drawSpriteList.mario.rise(WH.mario.bigstatus.height, 3);
     }
 

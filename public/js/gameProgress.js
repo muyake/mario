@@ -116,10 +116,10 @@ let totalProgressSprite = {
         }, {
             isVisible: true,
             id: lib.newGuid(),
-            status: 1,
+            status: 0,
             positionmile: PJNum.wall1 + 100 + WH.wall.width * 2,
             physicaltop: PJNum.wallTop,
-            contain: 3, //0代表没有东西,1代表金币，2代表蘑菇，3代表花，4代表星星。
+            contain: 0, //0代表没有东西,1代表金币，2代表蘑菇，3代表花，4代表星星。
         }, {
             isVisible: true,
             id: lib.newGuid(),
@@ -622,14 +622,15 @@ let totalProgressSprite = {
             isVisible: true,
             id: lib.newGuid(),
             positionmile: PJNum.wall3 + WH.wall.width * 50,
-        },
-        {
-            isAdd: false, //判断是否加入过数组
-            isMonster: true,
-            isVisible: true,
-            id: lib.newGuid(),
-            positionmile: 740,
         }
+        // ,
+        // {
+        //     isAdd: false, //判断是否加入过数组
+        //     isMonster: true,
+        //     isVisible: true,
+        //     id: lib.newGuid(),
+        //     positionmile: 740,
+        // }
 
     ],
     star: [],

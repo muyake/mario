@@ -106,22 +106,23 @@ let sourceLoadObj = {
         }
     },
     progressOver: function() {
+
         element.mycanvas.style.display = 'block';
         element.progressDiv.style.display = 'none';
         element.tipDiv.style.display = 'block';
         element.progressBox.style.display = 'none';
-        //加载图片完成后执行。
-        createFactory.init();
-        createFactory.insertDrawSpriteList(0, drawSpriteList.arrayOthersA);
-        gameControl.start();
-        progressObj.countDownStart();
+
         //背景音乐响起     
-        //audioControl.BGMPlay(gameSourceObj.audioList.BGM);
+        audioControl.BGMPlay(gameSourceObj.audioList.BGM);
         audioControl.timeupdateAddEventListener(gameSourceObj.audioList.jumpAll);
         audioControl.timeupdateAddEventListener(gameSourceObj.audioList.collision);
         audioControl.timeupdateAddEventListener(gameSourceObj.audioList.music);
-        game.init();
-
+        //加载图片完成后执行。
+        createFactory.init();
+        createFactory.insertDrawSpriteList(0, drawSpriteList.arrayOthersA);       
+        gameControl.start();
+        progressObj.countDownStart();        
+        game.init(); 
         // drawSpriteList.mario.rise(WH.mario.bigstatus.height, 3);
     }
 }
