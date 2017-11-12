@@ -110,6 +110,4 @@ let behaviorList = {
         }
     },
 }
-export {
-    behaviorList
-};
+export  {behaviorList};

@@ -60,7 +60,7 @@ let progressObj = {
     mileageNumUpdate: function(fpsNum) {
         this.fpsNum = (fpsNum == 0) ? 1 : (fpsNum || this.fpsNum);      
         this.mileageNum += this.velocityX / this.fpsNum;
-        this.createSpriteMileNum =(this.mileageNum * gameConfig.objectSpeedRate).toFixed(0);
+        this.createSpriteMileNum =Math.round(this.mileageNum * gameConfig.objectSpeedRate);
        
     },
     countDownNumUpdate: function() {
@@ -112,14 +112,14 @@ let totalProgressSprite = {
             status: 1,
             positionmile: PJNum.wall1 + 100 + WH.wall.width,
             physicaltop: PJNum.wallTop,
-            contain: 2, //0代表没有东西,1代表金币，2代表蘑菇，3代表花，4代表星星。
+            contain: 2, //0代表没有东西,1代表金币，2代表蘑菇，ddd3代表花，4代表星星。
         }, {
             isVisible: true,
             id: lib.newGuid(),
-            status: 0,
+            status: 1,
             positionmile: PJNum.wall1 + 100 + WH.wall.width * 2,
             physicaltop: PJNum.wallTop,
-            contain: 0, //0代表没有东西,1代表金币，2代表蘑菇，3代表花，4代表星星。
+            contain: 3, //0代表没有东西,1代表金币，2代表蘑菇，3代表花，4代表星星。
         }, {
             isVisible: true,
             id: lib.newGuid(),
@@ -505,14 +505,16 @@ let totalProgressSprite = {
         },
 
     ],
-    monster: [{
-            isDie: false,
-            isAdd: false, //判断是否加入过数组
-            isMonster: true,
-            isVisible: true,
-            id: lib.newGuid(),
-            positionmile:  540,
-        },{
+    monster: [
+    // {
+    //         isDie: false,
+    //         isAdd: false, //判断是否加入过数组
+    //         isMonster: true,
+    //         isVisible: true,
+    //         id: lib.newGuid(),
+    //         positionmile:  540,
+    //     },
+        {
             isDie: false,
             isAdd: false, //判断是否加入过数组
             isMonster: true,
@@ -596,7 +598,13 @@ let totalProgressSprite = {
         }
     ],
     //mushroom: [],
-    tortoise: [ {
+    tortoise: [{
+            isAdd: false, //判断是否加入过数组
+            isMonster: true,
+            isVisible: true,
+            id: lib.newGuid(),
+            positionmile: PJNum.wall3 + WH.wall.width * 16,
+        },  {
             isAdd: false, //判断是否加入过数组
             isMonster: true,
             isVisible: true,
@@ -614,6 +622,13 @@ let totalProgressSprite = {
             isVisible: true,
             id: lib.newGuid(),
             positionmile: PJNum.wall3 + WH.wall.width * 50,
+        },
+        {
+            isAdd: false, //判断是否加入过数组
+            isMonster: true,
+            isVisible: true,
+            id: lib.newGuid(),
+            positionmile: 740,
         }
 
     ],

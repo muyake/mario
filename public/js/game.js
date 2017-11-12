@@ -578,8 +578,12 @@ window.drawSpriteList = {
     createBulletSpriteList: [],
     //通过按键来控制这些对象的速度状态。
     goDirection: function(status) {
-        this.bg.velocityX = gameConfig.skySpeed * status;
-        this.progressObj.velocityX = gameConfig.progressObjSpeed * status;
+        var rate=1;
+        if( drawSpriteList.mario.status>1){
+            rate=1.5;
+        }
+        this.bg.velocityX = gameConfig.skySpeed * status*rate;
+        this.progressObj.velocityX = gameConfig.progressObjSpeed * status*rate;
         this.arrayOthersA.forEach(function(itemDraw) {
             itemDraw.velocityX = gameConfig.objectSpeed * status;
         });

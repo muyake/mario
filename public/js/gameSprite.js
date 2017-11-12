@@ -162,6 +162,7 @@ class SceneImagePainter extends ImagePainter {
         }
     }
 }
+
 class Mario extends Sprite {
     constructor(setting) {
         super(setting.name);
@@ -1055,10 +1056,8 @@ class Bullet extends SceneSprite {
 
             this.update(ctx, time, fpsNum);
             ctx.save();
-
             ctx.translate(this.left + this.width / 2, this.top + this.height / 2);
             this.rotate += this.RV / fpsNum;
-
             ctx.rotate(this.rotate * Math.PI / 180);
         }
 
