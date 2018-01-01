@@ -604,12 +604,6 @@ let totalProgressSprite = {
             isVisible: true,
             id: lib.newGuid(),
             positionmile: PJNum.wall3 + WH.wall.width * 16,
-        },  {
-            isAdd: false, //判断是否加入过数组
-            isMonster: true,
-            isVisible: true,
-            id: lib.newGuid(),
-            positionmile: PJNum.wall3 + WH.wall.width * 16,
         }, {
             isAdd: false, //判断是否加入过数组
             isMonster: true,
@@ -622,15 +616,7 @@ let totalProgressSprite = {
             isVisible: true,
             id: lib.newGuid(),
             positionmile: PJNum.wall3 + WH.wall.width * 50,
-        }
-        // ,
-        // {
-        //     isAdd: false, //判断是否加入过数组
-        //     isMonster: true,
-        //     isVisible: true,
-        //     id: lib.newGuid(),
-        //     positionmile: 740,
-        // }
+        }      
 
     ],
     star: [],
@@ -647,8 +633,7 @@ let totalProgressSprite = {
         physicaltop: 0,
         positionmile: PJNum.final1 + 234,
     }],
-    hole: [
-      
+    hole: [      
         {
             isVisible: true,
             id: lib.newGuid(),

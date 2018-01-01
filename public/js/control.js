@@ -155,7 +155,7 @@
 		},
 		//绘制所有按钮
 		draw: function() {
-			this.context.clearRect(0, 0, this.canvasWidht, this.canvasHeight);
+			this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
 			this.context.save();
 			this.context.shadowColor = 'rgba(0, 0, 0, 0.8)';
 			this.context.shadowOffsetX = 2;
@@ -297,7 +297,7 @@
 			var bbox = this.thrustersCanvas.getBoundingClientRect();
 			var self = this;
 			return {
-				y: (y - bbox.left) * (self.canvasWidht / bbox.height),
+				y: (y - bbox.left) * (self.canvasWidth / bbox.height),
 				x: (x - bbox.top) * (self.canvasHeight / bbox.width)
 			};
 		},
@@ -308,7 +308,7 @@
 			this.thrustersCanvas= document.getElementById('controlCanvas'),
 		this.context= document.getElementById('controlCanvas').getContext('2d'),
 		this.result=document.querySelector('.result'),
-		this.canvasWidht= document.getElementById('controlCanvas').width;
+		this.canvasWidth= document.getElementById('controlCanvas').width;
 		
 		this.canvasHeight= document.getElementById('controlCanvas').height;
 			self.draw();

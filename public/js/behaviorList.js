@@ -19,7 +19,7 @@ let behaviorList = {
         this.lastMove = 0;
         this.fpsNum = 60;
         this.execute = function(sprite, context, time, fpsNum) {
-            this.fpsNum = (fpsNum == 0) ? 0 : (fpsNum || this.fpsNum);
+            this.fpsNum = (fpsNum == 0) ? 1 : fpsNum;
             sprite.left += sprite.velocityX / this.fpsNum;
             this.lastMove = time;
         }
@@ -92,7 +92,9 @@ let behaviorList = {
         this.execute = function(sprite, context, time, fpsNum) {
             if (this.lastAdvance !== 0) {
                 if (sprite.velocityY < sprite.startVelocityY) {
-                    this.fpsNum = (fpsNum == 0) ? 0 : (fpsNum || this.fpsNum);
+                    //这个地方注意
+                    // this.fpsNum = (fpsNum == 0) ? 0 : (fpsNum || this.fpsNum);
+                    this.fpsNum=(fpsNum == 0) ? 1 : fpsNum ;
                     sprite.velocityY = sprite.velocityY + sprite.GRAVITY_FORCE / this.fpsNum;
                     sprite.top += sprite.velocityY / this.fpsNum;
                     if (sprite.top < sprite.initialTop) {
